@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>vTag</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/pictures/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  </head>
+  <body>
+
+    <nav class="flex-nav general">
+      <div class="nav-symbol">
+        <img class="character" src="../pictures/pic_adobespark.png" alt="Character picture">
+        <h1 class="darkBgFontColor">vTag</h1>
+      </div>
+      <div class="dropdown">
+        <a class="anchorStyle" href= "/">Home</a>
+        <a class="anchorStyle" href="/videos">Videos</a>
+      </div>
+    </nav>
+
+    <h2> vTag - Twitch Streamer</h2>
+
+    <div class="lightBgFontColor darkBgFontColor flex-container">
+      <div class="flex-info">
+        <p class="resize-welcome">Welcome! I am a variety streamer just starting out my journey.</p>
+        <div class="t-button-div">
+          <a class="twitch-button" href="https://www.twitch.tv/veeetag">My Twitch</a>
+        </div>
+        <div class="t-button-div">
+          <h4>Followers:</h4>
+          <button class="follower-button" type="button" name="followers"><%= total %></button>
+        </div>
+      </div>
+      <hr class="vertical-rule">
+      <div class="flex-info-2">
+        <h3 class="resize flex-info-special message-title">Message of the day:</h3>
+        <p class="message">Pringles are the superior chips, for many reasons: <br> Always comes in a full can. <br>Almost all of their flavors are damn good. </p>
+      </div>
+    </div>
+
+    <div class="flex-container-colored darkBgFontColoralt flex-container">
+      <div class="flex-info">
+        <h3 class="resize flex-info-special">Streaming schedule:</h3>
+        <p>Friday: 10pm - 2am <br><br> Saturday: 10pm - 2am</p>
+      </div>
+      <hr class="vertical-rule-alt">
+      <div class="flex-info">
+          <h3 class="resize flex-info-special">Games im playing:</h3>
+          <ul>
+            <li>Valorant</li>
+            <li>Albion</li>
+            <li>Lost Ark (coming soon)</li>
+            <li>Tower of Fantasy (coming soon)</li>
+            <li>maybe more in the future....</li>
+          </ul>
+      </div>
+    </div>
+
+    <h2>All About Me</h2>
+
+    <div class="lightBgFontColor darkBgFontColor flex-container">
+      <div class="flex-info">
+        <p class="resize-alt center">★ <span class="bold">Hi there I'm vTag</span>, im 24 years old, born in the Philippines. <br> <br>★ <span class="bold">I like to play FPS games</span>, MMO's, and puzzle games. I'm mostly into competitve games though. </p>
+      </div>
+      <hr class="vertical-rule">
+      <div class="flex-info">
+        <p class="resize-alt center">★ <span class="bold">Tactical FPS's are what I usually like</span> to play most. Which is why I primarily play Valorant. <br> <br>★ <span class="bold">I stream just to relax</span> and have some fun conversations about day to day stuff with my chat and friends. <br> <br> <span class="bold">Thank for Visiting!</span> </p>
+      </div>
+    </div>
+
+    <div class="flex-container-colored darkBgFontColoralt flex-container">
+      <div class="flex-info">
+        <p class="resize">Bubba</p>
+        <p class="center">Bubba is my lovely dog and the cutest girl out there! <br>Here are some pictures of her.</p>
+      </div>
+      <hr class="vertical-rule-alt">
+      <div class="flex-info dog-frame">
+        <img class="dog" src="../pictures/newdog1.png" alt="bubba picture">
+        <img class="dog dogPlayHide" src="../pictures/newdog2.png" alt="bubba picture">
+        <img class="dog dogPlayHide" src="../pictures/newdog3.png" alt="bubba picture">
+        <a class="prev" onclick="prev(-1)">&#10094;</a>
+        <a class="next" onclick="next(1)">&#10095;</a>
+      </div>
+    </div>
+
+    <footer class="general darkBgFontColoralt">
+      <p><span>★ </span> Say Hi <span> ★</span></p>
+      <div class="darkBgFontColoralt flex-footer">
+        <a href="https://www.instagram.com/"><p class="footer"><i class="fab fa-instagram"></i></p></a>
+        <a href="https://discord.com/invite/TVfWYTnJKK"><p class="footer"><i class="fab fa-discord"></i></p></a>
+        <a href="https://www.twitch.tv/veeetag"><p class="footer"><i class="fab fa-twitch"></i></p></a>
+      </div>
+
+      <p class="copyright">Made By &#169; Comrade <%= year %> <!--replace with date function --></p>
+    </footer>
+
+
+<script src="index.js" charset="utf-8"></script>
+  </body>
+</html>
