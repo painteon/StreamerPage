@@ -43,7 +43,7 @@ getYear();
     }
   }
 
-  const req = https.request(url, options, function(response){
+  const reqs = https.request(url, options, function(response){
     console.log( "1. statusCode:", response.statusCode);
     // console.log("1. headers:", response.headers);
     response.on("data", function(data){
@@ -54,12 +54,12 @@ getYear();
     });
   });
 
-  req.on('error', (e) => {
+  reqs.on('error', (e) => {
     console.error("error 1: "+ e);
     console.log("passed through here");
   });
 
-  req.end();
+  reqs.end();
 
 // GET requests for channel follower count
 app.get("/", function(req, res){
@@ -76,7 +76,6 @@ app.get("/", function(req, res){
 
 
 
-    setTimeout(() => {
       https.get("https://api.twitch.tv/helix/users?login=veeetag", optionals, function(response){
         console.log('2. statusCode:', response.statusCode);
         // console.log("2. headers:", response.headers);
@@ -89,7 +88,6 @@ app.get("/", function(req, res){
       }).on("error", (e) => {
         console.error("error 2: " + e);
       });
-    }, 1000);
 
 setTimeout(() => {
   https.get('https://api.twitch.tv/helix/users/follows?to_id=' + userId + '&first=1', optionals, function(resp){
@@ -102,11 +100,13 @@ setTimeout(() => {
   }).on("error", (e) => {
     console.error("error 3: " + e);
   }).end();
-}, 2000);
 
-
-
+setTimeout( function() {
+  console.log(followers);
   res.render("index", {year: date, total: followers});
+}, 1050)
+
+}, 1000);
 });
 
 app.get("/about", function(req, res){
