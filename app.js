@@ -74,18 +74,22 @@ app.get("/", function(req, res){
     }
   }
 
-    https.get("https://api.twitch.tv/helix/users?login=veeetag", optionals, function(response){
-      console.log('2. statusCode:', response.statusCode);
-      // console.log("2. headers:", response.headers);
 
-      response.on("data", (d) => {
-        let channel = JSON.parse(d);
-        userId = channel.data[0].id;
-        // process.stdout.write(d);
+
+    setTimeout(() => {
+      https.get("https://api.twitch.tv/helix/users?login=veeetag", optionals, function(response){
+        console.log('2. statusCode:', response.statusCode);
+        // console.log("2. headers:", response.headers);
+
+        response.on("data", (d) => {
+          let channel = JSON.parse(d);
+          userId = channel.data[0].id;
+          // process.stdout.write(d);
+        });
+      }).on("error", (e) => {
+        console.error("error 2: " + e);
       });
-    }).on("error", (e) => {
-      console.error("error 2: " + e);
-    });
+    }, 1000);
 
 setTimeout(() => {
   https.get('https://api.twitch.tv/helix/users/follows?to_id=' + userId + '&first=1', optionals, function(resp){
@@ -98,7 +102,7 @@ setTimeout(() => {
   }).on("error", (e) => {
     console.error("error 3: " + e);
   }).end();
-}, 1000);
+}, 2000);
 
 
 

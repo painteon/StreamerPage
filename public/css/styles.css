@@ -515,7 +515,7 @@ nav a:last-child{
     background-color: #343A40;
     display: inline;
     position: absolute;
-    top: 48.5%;
+    top: 45%;
     border: none;
     box-shadow: 1px 0 20px 1px #02475E;
   }
@@ -526,7 +526,7 @@ nav a:last-child{
     background-color: #343A40;
     display: inline;
     position: absolute;
-    top: 48.5%;
+    top: 45%;
     border: none;
     box-shadow: 1px 0 20px 1px #51C4D3;
   }
