@@ -221,7 +221,7 @@ ul{
 img{
   border-radius: 20%;
   height: 400px;
-  width: 400px;
+  width: 375px;
   animation-name: fade;
   animation-duration: 1.5s;
 }
@@ -443,7 +443,7 @@ nav a:last-child{
   border: 10px solid #02475E;
   border-radius: 21%;
   height: 398px;
-  width: 398px;
+  width: 373px;
   z-index: 2;
 }
 
@@ -534,7 +534,7 @@ nav a:last-child{
   img{
     border-radius: 20%;
     height: 400px;
-    width: 400px;
+    width: 375px;
     animation-name: fade;
     animation-duration: 1.5s;
   }
@@ -542,7 +542,7 @@ nav a:last-child{
     border: 10px solid #02475E;
     border-radius: 21%;
     height: 398px;
-    width: 398px;
+    width: 373px;
     z-index: 2;
   }
 }
