@@ -5,6 +5,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const https = require("https");
+const aws = require('aws-sdk');
 
 
 const app = express();
@@ -17,6 +18,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
+
+let s3 = new aws.S3({
+  CLIENT_ID: process.env.CLIENT_ID,
+  CLIENT_SECRET: process.env.CLIENT_SECRET,
+  URL: process.env.URL,
+  TOKEN_TYPE: process.env.TOKEN_TYPE
+});
 
 
 let date;
