@@ -52,8 +52,6 @@ getYear();
   }
 
   const reqs = https.request(url, options, function(response){
-    console.log( "1. statusCode:", response.statusCode);
-    // console.log("1. headers:", response.headers);
     response.on("data", function(data){
 
       let myObj = data;
@@ -85,7 +83,7 @@ app.get("/", function(req, res){
 
 
       https.get("https://api.twitch.tv/helix/users?login=veeetag", optionals, function(response){
-        console.log('2. statusCode:', response.statusCode);
+        // console.log('2. statusCode:', response.statusCode);
         // console.log("2. headers:", response.headers);
 
         response.on("data", (d) => {
@@ -99,7 +97,7 @@ app.get("/", function(req, res){
 
 setTimeout(() => {
   https.get('https://api.twitch.tv/helix/users/follows?to_id=' + userId + '&first=1', optionals, function(resp){
-    console.log('3. statusCode:', resp.statusCode);
+    // console.log('3. statusCode:', resp.statusCode);
     // console.log("3. headers:", resp.headers);
     resp.on('data', (da) => {
       followers = JSON.parse(da).total;
@@ -110,7 +108,7 @@ setTimeout(() => {
   }).end();
 
 setTimeout( function() {
-  console.log(followers);
+  // console.log(followers);
   res.render("index", {year: date, total: followers});
 }, 1050)
 
